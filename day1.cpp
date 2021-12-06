@@ -21,8 +21,11 @@ int main() {
 
     int result = 0;
 
-    for (int i = 1; i < n; i++) {
-        if (lines[i] > lines[i-1]) {
+    for (int i = 1; i < n-2; i++) {
+        int a = lines[i-1] + lines[i] + lines[i+1];
+        int b = lines[i] + lines[i+1] + lines[i+2];
+
+        if (b > a ) {
             result++;
         }
     }
